@@ -38,7 +38,7 @@ public class DrinkListeners implements Listener{
 			if(((LivingEntity)entity).getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
 				e.setCancelled(true);
 				p.openInventory(ref.barInv);
-				p.sendMessage(ref.getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+				p.sendMessage(ref.getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  ref.getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
 			}
 		}
 	}
@@ -208,7 +208,7 @@ public class DrinkListeners implements Listener{
 			Player p = (Player) e.getDamager();
 			if(e.getEntity() instanceof Villager) {
 				if(e.getEntity().getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
-					if(ref.getConfig().getBoolean("options.invinciblevillager")) {
+					if(ref.getConfig().getBoolean("options.invinciblevillager") || p.isOp()) {
 						e.setCancelled(true);
 						p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.cantdamage")));
 					}else {

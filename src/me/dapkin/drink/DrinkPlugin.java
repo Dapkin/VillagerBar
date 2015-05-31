@@ -129,18 +129,18 @@ public class DrinkPlugin extends JavaPlugin implements Listener{
 					if(p.hasPermission("villagerbar.spawn") || p.isOp()) {
 						Location loc = p.getLocation();
 						p.getWorld().spawnEntity(loc, EntityType.VILLAGER).setCustomName(getConfig().getString("options.villagername".replaceAll("(&([a-f0-9]))", "\u00A7$2")));
-						p.sendMessage(getConfig().getString("options.spawnsuccess").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+						p.sendMessage(getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  getConfig().getString("options.spawnsuccess").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
 					}
 				}else if(args.length == 1 && args[0].equalsIgnoreCase("reload")) {
 					if(p.hasPermission("villagerbar.reload") || p.isOp()) {
-						p.sendMessage(getConfig().getString("options.reloadsuccess").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+						p.sendMessage(getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  getConfig().getString("options.reloadsuccess").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
 						reloadPlugin();
 					}
 				}
 			}else if(cmd.getName().equalsIgnoreCase("bar")) {
-				if(p.hasPermission("villagerbar.virtual") && p.isOp()) {
+				if(p.hasPermission("villagerbar.virtual") || p.isOp()) {
 					p.openInventory(barInv);
-					p.sendMessage(getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+					p.sendMessage(getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
 				}
 			}
 		}
