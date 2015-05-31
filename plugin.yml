@@ -1,0 +1,11 @@
+name: VillagerBar
+version: 1.0
+main: me.dapkin.drink.DrinkPlugin
+depend: [Vault]
+commands:
+  villagerbar:
+    description: Spawn a Bartender at your location!
+    useage: /villagerbar
+  bar:
+    description: Opens up a virtual bar!
+    useage: /bar
