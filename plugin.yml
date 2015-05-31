@@ -9,3 +9,14 @@ commands:
   bar:
     description: Opens up a virtual bar!
     useage: /bar
+permissions:
+  villagerbar.spawn:
+    description: Allows player(s) to spawn a Bartender!
+    default: false
+  villagerbar.reload:
+    description: Allows player(s) to reload the config!
+    default: false
+  villagerbar.virtual:
+    description: Allows player(s) to access a Bartender from anywhere!
+    default: false
+
