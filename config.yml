@@ -13,19 +13,32 @@ options:
   reloadsuccess: '&aYou have successfully reloaded the plugin!'
   prefix: '&4[&cVillagerBar&4]'
   cantdamage: '&aSorry, but you can not kill the Bartenders!'
-names:
-  drink1: 'Gasoline'
-  drink2: 'Tequila'
-  drink3: 'Jack Daniels'
-  drink4: 'Captain Morgan'
-  drink5: 'Bacardi'
-  drink6: 'Smirnoff'
-  drink7: 'Fireball'
-price:
-  drink1: 1000
-  drink2: 5000
-  drink3: 10000
-  drink4: 25000
-  drink5: 50000
-  drink6: 75000
-  drink7: 100000
+drinks:
+  drink1:
+    name: 'Gasoline'
+    price: 1000
+    reward: 2000
+  drink2:
+    name: 'Tequila'
+    price: 5000
+    reward: 10000
+  drink3:
+    name: 'Jack Daniels'
+    price: 10000
+    reward: 20000
+  drink4:
+    name: 'Captain Morgan'
+    price: 25000
+    reward: 50000
+  drink5:
+    name: 'Bacardi'
+    price: 50000
+    reward: 100000
+  drink6:
+    name: 'Smirnoff'
+    price: 75000
+    reward: 150000
+  drink7:
+    name: 'Fireball'
+    price: 100000
+    reward: 200000
