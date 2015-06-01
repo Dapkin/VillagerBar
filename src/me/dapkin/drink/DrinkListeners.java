@@ -4,6 +4,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -22,6 +23,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitScheduler;
 
 public class DrinkListeners implements Listener{
 	
@@ -29,16 +31,19 @@ public class DrinkListeners implements Listener{
 	public DrinkListeners(DrinkPlugin inst) {
 		this.ref = inst;
 	}
+	BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 	
 	@EventHandler
 	public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent e) {
 		Player p = e.getPlayer();
 		Entity entity = e.getRightClicked();
 		if(e.getRightClicked() instanceof Villager) {
-			if(((LivingEntity)entity).getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
-				e.setCancelled(true);
-				p.openInventory(ref.barInv);
-				p.sendMessage(ref.getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  ref.getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+			if(entity.getCustomName() != null) {
+				if(((LivingEntity)entity).getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
+					e.setCancelled(true);
+					p.openInventory(ref.barInv);
+					p.sendMessage(ref.getConfig().getString("options.prefix").replaceAll("(&([a-f0-9]))", "\u00A7$2") + " " +  ref.getConfig().getString("options.openmessage").replaceAll("(&([a-f0-9]))", "\u00A7$2"));
+				}
 			}
 		}
 	}
