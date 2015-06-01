@@ -75,23 +75,23 @@ public class DrinkPlugin extends JavaPlugin implements Listener{
 		ItemMeta ipaper = paper.getItemMeta();
 		
 		icompass.setDisplayName(ChatColor.WHITE + getConfig().getString("options.compassname"));
-		idrink1.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink1"));
-		idrink2.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink2"));
-		idrink3.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink3"));
-		idrink4.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink4"));
-		idrink5.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink5"));
-		idrink6.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink6"));
-		idrink7.setDisplayName(ChatColor.WHITE + getConfig().getString("names.drink7"));
+		idrink1.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink1.name"));
+		idrink2.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink2.name"));
+		idrink3.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink3.name"));
+		idrink4.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink4.name"));
+		idrink5.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink5.name"));
+		idrink6.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink6.name"));
+		idrink7.setDisplayName(ChatColor.WHITE + getConfig().getString("drinks.drink7.name"));
 		ipaper.setDisplayName(ChatColor.WHITE + getConfig().getString("options.papername"));
 		
 		icompass.setLore(Arrays.asList(ChatColor.GREEN + getConfig().getString("options.compasslore")));
-		idrink1.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink1"))));
-		idrink2.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink2"))));
-		idrink3.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink3"))));
-		idrink4.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink4"))));
-		idrink5.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink5"))));
-		idrink6.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink6"))));
-		idrink7.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("price.drink7"))));
+		idrink1.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink1.price"))));
+		idrink2.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink2.price"))));
+		idrink3.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink3.price"))));
+		idrink4.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink4.price"))));
+		idrink5.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink5.price"))));
+		idrink6.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink6.price"))));
+		idrink7.setLore(Arrays.asList(ChatColor.GREEN + "Price: " + getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(getConfig().getInt("drinks.drink7.price"))));
 		ipaper.setLore(Arrays.asList(ChatColor.GREEN + getConfig().getString("options.paperlore")));
 		
 		compass.setItemMeta(icompass);

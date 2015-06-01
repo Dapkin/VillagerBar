@@ -54,71 +54,71 @@ public class DrinkListeners implements Listener{
 		if(inv.getName().equals(ref.barInv.getName())) {
 			e.setCancelled(true);
 			if(clicked == null || clicked.getType() == Material.AIR) return;
-			else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink1"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink1")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink1"));
+			else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink1.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink1.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink1.price"));
 					player.getInventory().addItem(ref.drink1);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink1")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink1.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else{
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink2"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink2")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink2"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink2.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink2.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink2.price"));
 					player.getInventory().addItem(ref.drink2);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink2")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink2.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink3"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink3")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink3"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink3.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink3.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink3.price"));
 					player.getInventory().addItem(ref.drink3);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink3")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink3.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink4"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink4")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink4"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink4.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink4.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink4.price"));
 					player.getInventory().addItem(ref.drink4);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink4")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink4.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink5"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink5")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink5"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink5.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink5.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink5.price"));
 					player.getInventory().addItem(ref.drink5);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink5")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink5.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink6"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink6")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink6"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink6.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink6.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink6.price"));
 					player.getInventory().addItem(ref.drink6);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink6")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink6.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
 					player.sendMessage(error);
 				}
-			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("names.drink7"))) {
-				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("price.drink7")) {
-					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("price.drink7"));
+			}else if(clicked.getItemMeta().getDisplayName().contains(ref.getConfig().getString("drinks.drink7.name"))) {
+				if(DrinkPlugin.economy.getBalance(player) >= ref.getConfig().getInt("drinks.drink7.price")) {
+					DrinkPlugin.economy.withdrawPlayer(player, ref.getConfig().getInt("drinks.drink7.price"));
 					player.getInventory().addItem(ref.drink7);
-					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink7")) +" has been taken from your account.");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink7.price")) +" has been taken from your account.");
 					player.closeInventory();
 				}else {
 					player.closeInventory();
@@ -140,8 +140,8 @@ public class DrinkListeners implements Listener{
 			if(e.getItem().equals(ref.drink1)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink1") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink1") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink1.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink1.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -149,8 +149,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink2)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink2") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink2") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink2.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink2.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -158,8 +158,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink3)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink3") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink3") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink3.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink3.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -167,8 +167,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink4)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink4") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink4") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink4.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink4.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -176,8 +176,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink5)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink5") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink5") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink5.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink5.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -185,8 +185,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink6)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink6") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink6") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink6.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink6.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
@@ -194,8 +194,8 @@ public class DrinkListeners implements Listener{
 			}else if(e.getItem().equals(ref.drink7)) {
 				if(num < ref.getConfig().getInt("options.chance")) {
 					p.playSound(loc, Sound.LEVEL_UP, 100, 0);
-					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("price.drink7") * 2);
-					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("price.drink7") * 2) + "!");
+					DrinkPlugin.economy.depositPlayer(p, ref.getConfig().getInt("drinks.drink7.reward"));
+					p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.GREEN + "You've won " + ref.getConfig().getString("options.currencysign") + NumberFormat.getNumberInstance(Locale.US).format(ref.getConfig().getInt("drinks.drink7.reward")) + "!");
 				}else {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 20));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 20));
