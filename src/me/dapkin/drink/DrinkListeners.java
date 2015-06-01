@@ -4,7 +4,6 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Random;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -23,7 +22,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitScheduler;
 
 public class DrinkListeners implements Listener{
 	
@@ -31,7 +29,6 @@ public class DrinkListeners implements Listener{
 	public DrinkListeners(DrinkPlugin inst) {
 		this.ref = inst;
 	}
-	BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 	
 	@EventHandler
 	public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent e) {
