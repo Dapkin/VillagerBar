@@ -1,5 +1,5 @@
 name: VillagerBar
-version: 1.0
+version: 1.3
 main: me.dapkin.drink.DrinkPlugin
 depend: [Vault]
 commands:
