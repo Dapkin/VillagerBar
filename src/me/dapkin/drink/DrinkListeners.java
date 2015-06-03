@@ -209,12 +209,15 @@ public class DrinkListeners implements Listener{
 		if(e.getDamager() instanceof Player) {
 			Player p = (Player) e.getDamager();
 			if(e.getEntity() instanceof Villager) {
-				if(e.getEntity().getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
-					if(ref.getConfig().getBoolean("options.invinciblevillager") || p.isOp()) {
-						e.setCancelled(true);
-						p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.cantdamage")));
-					}else {
-						return;
+				boolean hasCustomName = e.getEntity().getCustomName() != null;
+				if(hasCustomName) {
+					if(e.getEntity().getCustomName().equals(ref.getConfig().getString("options.villagername"))) {
+						if(ref.getConfig().getBoolean("options.invinciblevillager") || p.isOp()) {
+							e.setCancelled(true);
+							p.sendMessage(ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.prefix")) + " " + ChatColor.translateAlternateColorCodes('&', ref.getConfig().getString("options.cantdamage")));
+						}else {
+							return;
+						}
 					}
 				}
 			}
