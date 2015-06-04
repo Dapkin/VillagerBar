@@ -53,6 +53,7 @@ public class DrinkPlugin extends JavaPlugin implements Listener{
 		this.reloadConfig();
 		setupInv();
 	}
+	//Creates Itemstacks!
 	ItemStack compass = new ItemStack(Material.COMPASS);
 	ItemStack drink1 = new ItemStack(Material.POTION);
 	ItemStack drink2 = new ItemStack(Material.POTION);
